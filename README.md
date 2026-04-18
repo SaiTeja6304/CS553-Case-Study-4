@@ -8,7 +8,7 @@
 Image-Text to Text chatbot
 
 ## Models
-Inference: https://huggingface.co/google/gemma-3-27b-it  
+Inference: https://huggingface.co/google/gemma-4-31B-it
 
 ## Deployments  
 **AWS:**  

@@ -47,9 +47,9 @@ def generate_response_api(image, query: str, chat_history: str):
     ]
 
     try:
-        client = InferenceClient(token=HF_TOKEN, provider="featherless-ai")
+        client = InferenceClient(token=HF_TOKEN)
         completion = client.chat.completions.create(
-            model="google/gemma-3-27b-it",
+            model="google/gemma-4-31B-it",
             messages=messages,
             max_tokens=500
         )
