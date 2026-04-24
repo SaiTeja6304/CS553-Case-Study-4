@@ -17,8 +17,8 @@ for role, msg in st.session_state.chat_history:
     st.chat_message(role).markdown(msg)
 
 with st.sidebar:
-    with st.expander("Model Details"):
-        st.info("Only API model: google/gemma-4-31B-it is available for interaction.", icon="ℹ️")
+    # with st.expander("Model Details"):
+    st.info("API model: google/gemma-4-31B-it is available for interaction.", icon="ℹ️")
     
 
 image = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
