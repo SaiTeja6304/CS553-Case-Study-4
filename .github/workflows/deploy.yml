@@ -31,7 +31,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v6
       with:
         aws-region: ${{ env.AWS_REGION }}
-        role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/github-actions-ecs-role
+        role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/GitHubActionsECSDeployRole
         role-session-name: GitHubActionsECSDeployment
 
     - name: Login to Amazon ECR
@@ -67,7 +67,7 @@ jobs:
         infrastructure-role-arn: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/ecsInfrastructureRoleForExpressServices
         
         # Container configuration
-        container-port: 8080
+        container-port: 22011
 
         # Resource configuration
         task-role-arn: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/ecsTaskExecutionRole
