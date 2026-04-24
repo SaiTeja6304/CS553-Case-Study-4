@@ -49,7 +49,7 @@ jobs:
       # nosemgrep: third-party-action-not-pinned-to-commit-sha
       uses: docker/build-push-action@v7
       with:
-        context: .
+        context: ./src
         push: true
         # Tag with commit SHA for version tracking
         tags: ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}          
